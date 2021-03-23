@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> - 基础表格</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.css" rel="stylesheet">
+    <link href="/static/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="/static/css/animate.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <div class="col-sm-12" style="padding-left: 0px; padding-right: 0px">
+                        <div class="mail-box">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="text-center">
+                                        <img alt="image" class="m-t-xs img-responsive" src="{{ content.img }}">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4" style="margin-top: 10px;height: 100%">
+                                    <div class="row">
+                                        <h3><strong>{{ content.name }}</strong></h3>
+                                        <p><i class="fa fa-user"></i> {{ content.author }}</p>
+                                    </div>
+                                    <div class="row" style="float: bottom">
+                                        <div class="col-sm-6">
+                                            <a class="btn btn-warning btn-rounded" href="/comic_final?id={{ cid }}">查看第一话</a>
+                                        </div>
+                                        {% if flag %}
+                                            <div class="col-sm-6">
+                                                <a id='addfoucs' class="btn btn-primary btn-rounded"
+                                                   href="javascript:void(0)" value="">已关注漫画</a>
+                                            </div>
+                                        {% else %}
+                                            <div class="col-sm-6">
+                                                <a id='addfoucs' class="btn btn-warning btn-rounded"
+                                                   href="javascript:void(0)" onclick="foucs()">关注漫画</a>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <table class="table">
+                        <tbody>
+                        {% for item in comic %}
+                            <tr>
+                                <td><a href="/comic_final?id={{ item.id }}"><img height="200px" width="300px"
+                                                                                 src="{{ item.img_url }}"></a></td>
+                                <td><p>{{ item.name }}</p></td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 全局js -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+
+<!-- Peity -->
+<script src="/static/js/plugins/peity/jquery.peity.min.js"></script>
+
+<!-- 自定义js -->
+<script src="/static/js/content.js"></script>
+
+
+<!-- iCheck -->
+<script src="/static/js/plugins/iCheck/icheck.min.js"></script>
+
+<!-- Peity -->
+<script src="/static/js/demo/peity-demo.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+    });
+</script>
+<script type="text/javascript">
+    function foucs() {
+        var id ={{ content.id }};
+        var formData = {'id': id};
+        $.ajax({
+            //几个参数需要注意一下
+            cache: false,
+            type: "POST",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            data: formData,
+            url: "/addfoucs/",//url
+            async: false,  //必须要为false,必须必须
+
+            success: function (data) {
+                console.log(data);//打印服务端返回的数据(调试用)
+                if (data.status == "success") {
+                    if ($('#addfoucs').hasClass('btn btn-warning btn-rounded')) {
+                        $('#addfoucs').removeClass('btn btn-warning btn-rounded');
+                        $('#addfoucs').addClass('btn btn-primary btn-rounded');
+                        $('#addfoucs').add
+                        $('#addfoucs').removeAttr('onclick');
+                        window.location.reload()
+                    }
+                } else {
+                    alert(data.status)
+                }
+            },
+            error: function () {
+            }
+        });
+    }
+</script>
+
+
+</body>
+
+</html>

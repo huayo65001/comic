@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>个人资料</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="/static/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="/static/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="/static/css/animate.css" rel="stylesheet">
+    <link href="/static/css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+    <div class="row animated fadeInRight">
+        <div class="col-sm-4">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>个人资料</h5>
+                </div>
+                <div>
+                    <div class="ibox-content no-padding border-left-right">
+                        <img alt="image" class="img-responsive" src="/static/img/profile_big.jpg">
+                    </div>
+                    <div class="ibox-content profile-content">
+                        <h5>
+                            关于我
+                        </h5>
+                        <p>
+                            用户名：{{ user.username|safe }}
+                        </p>
+                        {% if user.first_name %}
+                            <p>
+                                用户姓名：{{ user.first_name }} {{ user.last_name }}
+                            </p>
+                        {% endif %}
+                        {% if user.email %}
+                            <p>
+                                用户邮箱：{{ user.email }}
+                            </p>
+                        {% endif %}
+                        {% if user.phone %}
+                            <p>
+                                用户手机号：{{ user.phone }}
+                            </p>
+                        {% endif %}
+                        <div class="row m-t-lg">
+                            <div class="col-sm-4">
+                                <span class="line">5,3,9,6,5,9,7,3,5,2</span>
+                                <h5><strong>{{ count }}</strong>订阅数</h5>
+                            </div>
+                        </div>
+                        <div class="user-button">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a type="button" class="btn btn-primary btn-sm btn-block" href="{% url 'form_v' %}"><i
+                                            class="fa fa-envelope"></i>修改个人信息
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>我的订阅</h5>
+                </div>
+                <div class="ibox-content">
+
+                    <div>
+                        <div class="feed-activity-list">
+                            {% for item in comic %}
+                                <div class="feed-element">
+                                    <div class="col-sm-12"
+                                         style="margin-bottom: 5px;padding-left: 0px; padding-right: 0px">
+                                        <a href="/comic_detail?id={{ item.id }}">
+                                            <div class="mail-box">
+                                                <div class="col-sm-8">
+                                                    <div class="text-center">
+                                                        <img alt="image" class="m-t-xs img-responsive"
+                                                             src="{{ item.img }}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <h3><strong>{{ item.name }}</strong></h3>
+                                                    <p><i class="fa fa-user"></i> {{ item.author }}</p>
+                                                </div>
+                                                <div class="actions">
+                                                    <a class="btn btn-xs btn-danger" id="remove_foucs" onclick="remove_foucs({{ item.id }})"><i class="fa fa-heart"></i>取消收藏</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- 全局js -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+
+<!-- 自定义js -->
+{#    <script src="/static/js/content.js"></script>#}
+
+
+<!-- Peity -->
+<script src="/static/js/plugins/peity/jquery.peity.min.js"></script>
+
+<!-- Peity -->
+<script src="/static/js/demo/peity-demo.js"></script>
+<script type="text/javascript">
+    function remove_foucs(id) {
+        var formData = {'id': id};
+        $.ajax({
+            //几个参数需要注意一下
+            cache: false,
+            type: "POST",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            data: formData,
+            url: "/removefoucs/",//url
+            async: false,  //必须要为false,必须必须
+
+            success: function (data) {
+                console.log(data);//打印服务端返回的数据(调试用)
+                if (data.status == "success") {
+                    window.location.reload();
+                } else {
+                    alert(data.status)
+                }
+            },
+            error: function () {
+            }
+        });
+    }
+</script>
+
+</body>
+
+</html>

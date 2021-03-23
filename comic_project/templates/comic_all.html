@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> - 基本图库</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.css" rel="stylesheet">
+    <link href="/static/js/plugins/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/static/css/animate.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/page.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        {% for item in comic %}
+            <div class="col-sm-4" style="margin-bottom: 5px;padding-left: 0px; padding-right: 0px">
+                <a href="/comic_detail?id={{ item.id }}">
+                    <div class="mail-box">
+                        <div class="col-sm-8">
+                            <div class="text-center">
+                                <img alt="image" class="m-t-xs img-responsive" src="{{ item.img }}">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <h3><strong>{{ item.name }}</strong></h3>
+                            <p><i class="fa fa-user"></i> {{ item.author }}</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="row">
+        <div id="page-normal">
+        </div>
+    </div>
+</div>
+
+
+<!-- 全局js -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+
+<!-- Peity -->
+<script src="/static/js/plugins/peity/jquery.peity.min.js"></script>
+
+<!-- 自定义js -->
+<script src="/static/js/content.js"></script>
+
+
+<!-- Fancy box -->
+<script src="/static/js/plugins/fancybox/jquery.fancybox.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('.fancybox').fancybox({
+            openEffect: 'none',
+            closeEffect: 'none'
+        });
+    });
+</script>
+<script>
+    var id = {{ id }};
+    switch (id) {
+        case 1:
+           document.getElementById("page-normal").innerHTML="<span id=\"page-prev\"><i></i>上一页</span>\n" +
+        "            <span id=\"page-current\">1</span>\n" +
+        "            <a href=\"/all?id=2\">2</a>\n" +
+        "            <a href=\"/all?id=3\">3</a>\n" +
+        "            <a href=\"/all?id=4\">4</a>\n" +
+        "            <a href=\"/all?id=5\">5</a>\n" +
+        "            <a href=\"/all?id=6\">6</a>\n" +
+        "            <a href=\"/all?id=7\">7</a>\n"+
+               "                <a id=\"page-next\" href=\"/all?id={{ idn }}\">下一页<i></i></a>\n"
+            break;
+        case 2:
+            document.getElementById("page-normal").innerHTML="<a id=\"page-prev\" href=\"/all?id={{ idp }}\"><i></i>上一页</a>\n" +
+        "            <a href=\"/all?id=1\">1</a>\n" +
+        "            <span id=\"page-current\">2</span>\n" +
+        "            <a href=\"/all?id=3\">3</a>\n" +
+        "            <a href=\"/all?id=4\">4</a>\n" +
+        "            <a href=\"/all?id=5\">5</a>\n" +
+        "            <a href=\"/all?id=6\">6</a>\n" +
+        "            <a href=\"/all?id=7\">7</a>\n" +
+            "                <a id=\"page-next\" href=\"/all?id={{ idn }}\">下一页<i></i></a>\n"
+            break;
+        case 3:
+            document.getElementById("page-normal").innerHTML="<a id=\"page-prev\" href=\"/all?id={{ idp }}\"><i></i>上一页</a>\n" +
+        "            <a href=\"/all?id=1\">1</a>\n" +
+        "            <a href=\"/all?id=2\">2</a>\n" +
+        "            <span id=\"page-current\">3</span>\n" +
+        "            <a href=\"/all?id=4\">4</a>\n" +
+        "            <a href=\"/all?id=5\">5</a>\n" +
+        "            <a href=\"/all?id=6\">6</a>\n" +
+        "            <a href=\"/all?id=7\">7</a>\n" +
+            "                <a id=\"page-next\" href=\"/all?id={{ idn }}\">下一页<i></i></a>\n"
+            break;
+        case 4:
+            document.getElementById("page-normal").innerHTML="<a id=\"page-prev\" href=\"/all?id={{ idp }}\"><i></i>上一页</a>\n" +
+        "            <a href=\"/all?id=1\">1</a>\n" +
+        "            <a href=\"/all?id=2\">2</a>\n" +
+        "            <a href=\"/all?id=3\">3</a>\n" +
+        "            <span id=\"page-current\">4</span>\n" +
+        "            <a href=\"/all?id=5\">5</a>\n" +
+        "            <a href=\"/all?id=6\">6</a>\n" +
+        "            <a href=\"/all?id=7\">7</a>\n" +
+            "                <a id=\"page-next\" href=\"/all?id={{ idn }}\">下一页<i></i></a>\n"
+            break;
+        case 5:
+             document.getElementById("page-normal").innerHTML="<a id=\"page-prev\" href=\"/all?id={{ idp }}\"><i></i>上一页</a>\n" +
+        "            <a href=\"/all?id=1\">1</a>\n" +
+        "            <a href=\"/all?id=2\">2</a>\n" +
+        "            <a href=\"/all?id=3\">3</a>\n" +
+        "            <a href=\"/all?id=4\">4</a>\n" +
+        "            <span id=\"page-current\">5</span>\n" +
+        "            <a href=\"/all?id=6\">6</a>\n" +
+        "            <a href=\"/all?id=7\">7</a>\n" +
+            "                <a id=\"page-next\" href=\"/all?id={{ idn }}\">下一页<i></i></a>\n"
+            break;
+        case 6:
+            document.getElementById("page-normal").innerHTML="<a id=\"page-prev\" href=\"/all?id={{ idp }}\"><i></i>上一页</a>\n" +
+        "            <a href=\"/all?id=1\">1</a>\n" +
+        "            <a href=\"/all?id=2\">2</a>\n" +
+        "            <a href=\"/all?id=3\">3</a>\n" +
+        "            <a href=\"/all?id=4\">4</a>\n" +
+        "            <a href=\"/all?id=5\">5</a>\n" +
+        "            <span id=\"page-current\">6</span>\n" +
+        "            <a href=\"/all?id=7\">7</a>\n" +
+            "                <a id=\"page-next\" href=\"/all?id={{ idn }}\">下一页<i></i></a>\n"
+            break;
+        case 7:
+            document.getElementById("page-normal").innerHTML="<a id=\"page-prev\" href=\"/all?id={{ idp }}\"><i></i>上一页</a>\n" +
+        "            <a href=\"/all?id=1\">1</a>\n" +
+        "            <a href=\"/all?id=2\">2</a>\n" +
+        "            <a href=\"/all?id=3\">3</a>\n" +
+        "            <a href=\"/all?id=4\">4</a>\n" +
+        "            <a href=\"/all?id=5\">5</a>\n" +
+        "            <a href=\"/all?id=6\">6</a>\n" +
+        "            <span id=\"page-current\">7</span>\n" +
+            "                <a id=\"page-next\" href=\"#\">下一页<i></i></a>\n"
+    }
+
+</script>
+
+
+</body>
+
+</html>

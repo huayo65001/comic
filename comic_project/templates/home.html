@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> - 联系人</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.css" rel="stylesheet">
+
+    <link href="/static/css/animate.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="carousel slide" id="carousel1">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <a href="/comic_detail?id={{ comicf.id }}">
+                            <img alt="image" class="img-responsive" src="{{ comicf.img|safe }}">
+                        </a>
+                    </div>
+                    {% for item in comici %}
+                    <div class="item">
+                        <a href="/comic_detail?id={{ item.id }}">
+                            <img alt="image" class="img-responsive" src="{{ item.img }}" href="#">
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <a data-slide="prev" href="carousel.html#carousel1" class="left carousel-control">
+                    <span class="icon-prev"></span>
+                </a>
+                <a data-slide="next" href="carousel.html#carousel1" class="right carousel-control">
+                    <span class="icon-next"></span>
+                </a>
+            </div>
+        </div>
+        {% for item in comic %}
+            <div class="col-sm-4" style="margin-bottom: 5px;padding-left: 0px; padding-right: 0px">
+                <div class="mail-box">
+                    <a href="/comic_detail?id={{ item.id }}">
+                        <div class="col-sm-8">
+                            <div class="text-center">
+                                <img alt="image" class="m-t-xs img-responsive" src="{{ item.img }}">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <h3><strong>{{ item.name }}</strong></h3>
+                            <p><i class="fa fa-user"></i>{{ item.author }}</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- 全局js -->
+<script src="/static/js/jquery.min.js?v=2.1.4"></script>
+<script src="/static/js/bootstrap.min.js?v=3.3.6"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('.contact-box').each(function () {
+            animationHover(this, 'pulse');
+        });
+    });
+</script>
+
+
+</body>
+
+</html>
