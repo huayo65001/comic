@@ -9,5 +9,9 @@
       <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <user-name>root</user-name>
     </data-source>
+    <data-source name="@localhost" uuid="f1baae6d-d5dd-4af9-a201-f1ebfdd456de">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+    </data-source>
   </component>
 </project>
