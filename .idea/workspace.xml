@@ -92,6 +92,13 @@
       </list>
     </option>
   </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="706" />
     <option name="y" value="-8" />
@@ -222,12 +229,12 @@
       <workItem from="1587436923250" duration="2558000" />
       <workItem from="1587689843958" duration="9424000" />
       <workItem from="1587958620108" duration="49000" />
-      <workItem from="1616489526558" duration="594000" />
+      <workItem from="1616489526558" duration="634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102460000" />
+    <option name="totallyTimeSpent" value="102500000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
