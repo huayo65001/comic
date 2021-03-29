@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b145c17b-37eb-4068-ab24-ef79a790c3f6" name="Default Changelist" comment="" />
+    <list default="true" id="b145c17b-37eb-4068-ab24-ef79a790c3f6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b2ee9a6-aef1-4679-aa4c-c1274fc73d41.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +34,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -100,10 +103,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="706" />
-    <option name="y" value="-8" />
-    <option name="width" value="668" />
-    <option name="height" value="784" />
+    <option name="x" value="255" />
+    <option name="y" value="-1080" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -111,8 +114,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -230,16 +233,19 @@
       <workItem from="1587689843958" duration="9424000" />
       <workItem from="1587958620108" duration="49000" />
       <workItem from="1616489526558" duration="634000" />
+      <workItem from="1616822239585" duration="248000" />
+      <workItem from="1616849617177" duration="227000" />
+      <workItem from="1616899530443" duration="27000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102500000" />
+    <option name="totallyTimeSpent" value="103002000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="255" y="-1080" width="1920" height="1080" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23676682" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18370607" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -253,7 +259,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32872504" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.27108434" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.5481928" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32872504" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32872504" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -313,25 +319,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/type">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="07e0561a-2d47-4464-91c8-f141b4c89a46">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/type" />
     <entry file="file://$PROJECT_DIR$/comic_project/templates/rank.html" />
-    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/comic_type">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="07e0561a-2d47-4464-91c8-f141b4c89a46">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/comic_type" />
     <entry file="file://$PROJECT_DIR$/comic_project/templates/comic_rank.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -391,15 +381,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/collect">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="466f26cd-529a-44f9-9a4e-c287b782732a">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/collect" />
     <entry file="file://$PROJECT_DIR$/comic_project/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-435">
@@ -467,51 +449,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/content_index">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="95c9385a-e14e-43ea-aec3-5b0dc920a359">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/comic_content">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="95c9385a-e14e-43ea-aec3-5b0dc920a359">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/content">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="95c9385a-e14e-43ea-aec3-5b0dc920a359">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/list">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="95c9385a-e14e-43ea-aec3-5b0dc920a359">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/auth_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="49840e02-7206-499b-8ce0-d2d7a6756377">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/content_index" />
+    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/comic_content" />
+    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/content" />
+    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/list" />
+    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/auth_user" />
     <entry file="file://$PROJECT_DIR$/static/css/page.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -526,15 +468,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/comic">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="b39ad7fd-feb6-4289-b51a-25d1e500cc84">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/comic" />
     <entry file="file://$PROJECT_DIR$/comic_project/templates/form_validate.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -607,15 +541,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/rank">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="6c31ac05-34ad-4023-ba85-5108d5a06e34">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://2b2ee9a6-aef1-4679-aa4c-c1274fc73d41/schema/comic/table/rank" />
     <entry file="file://$PROJECT_DIR$/comic/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
