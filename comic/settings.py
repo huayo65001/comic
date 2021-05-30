@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'comic',
         'USER':'root',
         'PASSWORD':'munaihe0521.',
-        'HOST':'121.199.27.42',
+        'HOST':'82.156.184.104',
         'PORT':'3306',
     }
 }

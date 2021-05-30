@@ -249,9 +249,9 @@ def form_change(request):
     phone = request.POST.get('phone')
     print("form_change", username, firstname, lastname, password, email, phone)
 
-    # models.AuthUser.objects.filter(username=username).update(username=username, first_name=firstname,
-    #                                                          last_name=lastname, password=password, email=email,
-    #                                                          phone=phone)
+    models.AuthUser.objects.filter(username=username).update(username=username, first_name=firstname,
+                                                             last_name=lastname, password=password, email=email,
+                                                             phone=phone)
     return HttpResponse(json.dumps({'status': 'success'}))
 
 

@@ -48,7 +48,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label">用户名：</label>
                             <div class="col-sm-8">
-                                <input id="username" disabled="disabled" value="{{ user.username }}" name="username"
+                                <input id="username" readonly="readonly" value="{{ user.username }}" name="username"
                                        class="form-control" type="text" aria-required="true" aria-invalid="true"
                                        class="error">
                             </div>
@@ -56,7 +56,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label">密码：</label>
                             <div class="col-sm-8">
-                                <input id="password" disabled="disabled" name="password" class="form-control"
+                                <input id="password" readonly="readonly" name="password" class="form-control"
                                        type="password" value="{{ user.password }}">
                             </div>
                         </div>
